@@ -3,7 +3,7 @@ import datetime
 
 def AfficheTitreApplication():
     custom_fig = Figlet(font='big')
-    print(custom_fig.renderText('F38C Initialisation Generator'))
+    print(custom_fig.renderText('F38C Init'))
 
 def AfficheInstructionUtilisateur():
     #instructions pour l'utilisateur
@@ -168,10 +168,9 @@ if __name__ == "__main__":
     Fichier.write("Sortie    : --" + '\n')
     Fichier.write("-----------------------------------------------------------------------------*/" + '\n')
     Fichier.write("void PortInit ()" + '\n')
-    Fichier.write("{" + '\n')
-    Fichier.write("   P0MDOUT = 0xFF;" + '\n')    
+    Fichier.write("{" + '\n')  
     Fichier.write("   XBR1 |= 0x40;   // autorise le fonctionnement du crossbar" + '\n')
-    Fichier.write("   XBR0 |= 0x08;   // autorise l'UART 0x01 ou sysclock sur P0^0 0x08" + '\n')
+    #Fichier.write("   XBR0 |= 0x01;   // autorise l'UART 0x01 ou sysclock sur P0^0 0x08" + '\n')
     Fichier.write("} // PortInit -----------------------------------------------------------------" + '\n')
 
     Fichier.close()
